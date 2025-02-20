@@ -41,7 +41,12 @@ class DummySandbox:
     # The same "program" seems to be now repeatedly parsed using AST and then compiled.
     # This could probably be simplified quite a bit.
     namespace = DummySandbox.compile_code(program)
-    return namespace[function_to_run](test_input)
+    try:
+      result = namespace[function_to_run](test_input)
+      return result, True
+    except Exception as e:
+      print(f"Execution failed: {e}")
+      return None, False
 
   @staticmethod
   def compile_code(program: str):
