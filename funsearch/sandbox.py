@@ -11,7 +11,7 @@ import cloudpickle
 CONTAINER_MAIN = (pathlib.Path(__file__).parent / "container" / "container_main.py").absolute()
 
 IMAGE_NAME = "funsearch_sandbox"
-
+ 
 
 class DummySandbox:
   """Base class for Sandboxes that execute the generated code.
