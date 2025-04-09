@@ -1,5 +1,5 @@
 """This file will be used as an executable script by the ContainerSandbox and ExternalProcessSandbox.
-"""
+""" 
 import logging
 import pickle
 import sys
